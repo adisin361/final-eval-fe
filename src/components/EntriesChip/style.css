@@ -1,0 +1,30 @@
+.entries-chip {
+  display: flex;
+  background-color: white;
+  height: 50px;
+  border-radius: 10px;
+  align-items: center;
+  padding-left: 25px
+}
+
+.h-1 {
+  width: 5%;
+}
+
+.h-2 {
+  width: 21%;
+}
+
+.h-3 {
+  width: 18%;
+}
+
+.h-4 {
+  width: 49.5%;
+}
+
+.icons-div {
+  display: flex;
+  width: 50px;
+  justify-content: space-between;
+}
