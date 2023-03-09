@@ -27,6 +27,7 @@
   color: rgb(69, 32, 255);
   font-weight: bolder;
   font-family: Montserrat;
+  margin-bottom: 10px;
 }
 
 .new-fields-column {
@@ -68,4 +69,6 @@
   font-family: Montserrat;
   color: rgb(69, 32, 255);
   font-weight: bolder;
+  margin-bottom: 20px;
+  background: white;
 }
