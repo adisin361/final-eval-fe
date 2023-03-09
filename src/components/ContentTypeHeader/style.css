@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+.content-type-header {
+  color: rgba(0, 0, 0, 0.748);
+  display: flex;
+  align-items: center;
+  height: 6vh;
+  background-color: white;
+  width: 85vw;
+  padding-left: 30px;
+  font-family: Montserrat;
+  font-weight: bolder;
+  font-size: 1.3rem
+}

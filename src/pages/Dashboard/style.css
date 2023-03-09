@@ -1,0 +1,8 @@
+.dashboard-page {
+  display: flex;
+}
+
+.dashboard-container-section {
+  display: flex;
+  flex-direction: column;
+}
