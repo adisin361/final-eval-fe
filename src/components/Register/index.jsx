@@ -1,35 +1,32 @@
 /* eslint-disable no-unused-vars */
-import './style.css';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import bgImg from '../../assets/undraw-upload-re-pasx_2023-03-09/undraw-upload-re-pasx.png';
+import './style.css';
+import { useNavigate } from 'react-router-dom';
 import { makeAuthRequest } from '../../utils/makeRequest';
-import { LOGIN_URL } from '../../constants/apiEndPoints';
-const Login = () => {
-
+import { REGISTER_URL } from '../../constants/apiEndPoints';
+const Register = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
 
   const handleSubmit = async () => {
+    console.log(user);
+    console.log(password);
     try {
-
-      const loginData = await makeAuthRequest(LOGIN_URL, {
+      await makeAuthRequest(REGISTER_URL, {
         data: {
           username: user,
-          password,
+          password: password,
         },
       });
-      localStorage.setItem('jwt_token', loginData.data.JWT_token);
-      navigate('/dashboard');
+      navigate('/login');
     } catch (error) {
       setError(error);
-      setTimeout(() => {
-        setError(null);
-      }, 4000);
     }
   };
+
   return (
     <>
       <div className='login-page'>
@@ -40,7 +37,7 @@ const Login = () => {
         </div>
 
         <div className='login-section'>
-          <p>Login to your CMS+ account</p>
+          <p>Register your CMS+ account now!</p>
           <div className='login-form'>
             <p>Email</p>
             <input type="email"
@@ -52,13 +49,14 @@ const Login = () => {
             <input type="password"
               name="password"
               value={password}
-              onChange={(event) => setPassword(event.target.value)}
-            />
+              onChange={(event) => setPassword(event.target.value)} />
             <br />
             <button type="submit"
               disabled={user === '' || password === ''}
-              onClick={handleSubmit}>Login</button>
-            <p id='forgot-pwd'>Forgot password?</p>
+              onClick={handleSubmit}>Register</button>
+            <p id='forgot-pwd' className='have-account' onClick={() => {
+              navigate('/login');
+            }}>Already have an account</p>
           </div>
         </div>
       </div>
@@ -66,4 +64,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
