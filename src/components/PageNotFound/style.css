@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+.page-not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat;
+  height: 100vh;
+}
+
+.page-not-found h1 {
+  font-size: 5rem;
+}
+
+.page-not-found p {
+  font-size: 2rem;
+}
