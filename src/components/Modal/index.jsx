@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import './style.css';
 import PropTypes from 'prop-types';
 
-export default function Modal({ setIsOpen, modalOptions, setModalOptions }) {
+// eslint-disable-next-line react/prop-types
+export default function Modal({ setIsOpen, modalOptions, setModalOptions, addRecordTypeHandler }) {
   const [inputHeading, setInputHeading] = useState('');
   const [typeHeading, setTypeHeading] = useState('');
   return (
@@ -48,6 +49,7 @@ export default function Modal({ setIsOpen, modalOptions, setModalOptions }) {
               <button
                 className="create-btn"
                 onClick={() => {
+                  addRecordTypeHandler(inputHeading);
                   setIsOpen(false);
                   setModalOptions({});
                 }}

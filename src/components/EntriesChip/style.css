@@ -4,7 +4,8 @@
   height: 50px;
   border-radius: 10px;
   align-items: center;
-  padding-left: 25px
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .h-1 {
@@ -23,8 +24,18 @@
   width: 49.5%;
 }
 
+.id-entry {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .icons-div {
   display: flex;
   width: 50px;
   justify-content: space-between;
+}
+
+.icons-div img {
+  margin-right: 10px
 }

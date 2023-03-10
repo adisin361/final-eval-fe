@@ -11,6 +11,7 @@ describe('makeRequest', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
+
   it('should navigate to error page with status code when API call returns error status code', async () => {
     mockedAxios.mockRejectedValueOnce({ response: { status: 500 } });
     expect(mockNavigate).not.toBeCalled();
@@ -24,6 +25,7 @@ describe('makeRequest', () => {
         }
       }
     );
+
     expect(mockNavigate).toHaveBeenCalledTimes(1);
     expect(mockNavigate).toHaveBeenCalledWith(`${ERROR_ROUTE}/500`);
   });

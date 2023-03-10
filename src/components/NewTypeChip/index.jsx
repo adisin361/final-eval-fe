@@ -1,11 +1,12 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import './style.css';
 
-const NewTypeChip = () => {
+const NewTypeChip = ({ data, clickHandler, id, isActive }) => {
   return (
-    <div className="new-type-chip">
-      <p>Company_profile</p>
-      <p>13</p>
+    <div className={`${isActive ? 'active-chip' : ''} new-type-chip`} onClick={() => clickHandler(id)}>
+      <p>{data}</p>
+      {/* <p>13</p> */}
     </div>
   );
 };

@@ -32,12 +32,12 @@ export const ADD_FIELD_CONTENT_URL = {
 };
 
 export const EDIT_FIELD_CONTENT_URL = {
-  url: 'record/save',
+  url: 'record/field',
   method: 'patch',
 };
 
 export const DELETE_FIELD_CONTENT_URL = {
-  url: 'record/save',
+  url: 'record/field',
   method: 'delete',
 };
 
@@ -68,5 +68,10 @@ export const EDIT_COLLECTION_ENTRY = {
 
 export const ADD_COLLECTION_ENTRY = {
   url: 'collection/update',
+  method: 'post'
+};
+
+export const GET_RECORDS_BY_ID = {
+  url: 'record/details',
   method: 'post'
 };

@@ -21,7 +21,7 @@ const Login = () => {
           password,
         },
       });
-      localStorage.setItem('jwt_token', loginData.data.JWT_token);
+      localStorage.setItem('jwt_token', loginData.data.token);
       navigate('/dashboard');
     } catch (error) {
       setError(error);
@@ -57,7 +57,7 @@ const Login = () => {
             <br />
             <button type="submit"
               disabled={user === '' || password === ''}
-              onClick={handleSubmit}>Login</button>
+              onClick={handleSubmit} data-testid='register-link'>Login</button>
             <p id='forgot-pwd'>Forgot password?</p>
           </div>
         </div>

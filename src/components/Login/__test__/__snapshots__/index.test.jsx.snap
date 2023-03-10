@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Page should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="login-page"
+  >
+    <div
+      class="image-section"
+    >
+      <p>
+        Design APIs fast,
+      </p>
+      <p>
+        Manage content easily
+      </p>
+      <img
+        src="undraw-upload-re-pasx.png"
+      />
+    </div>
+    <div
+      class="login-section"
+    >
+      <p>
+        Login to your CMS+ account
+      </p>
+      <div
+        class="login-form"
+      >
+        <p>
+          Email
+        </p>
+        <input
+          name="username"
+          type="email"
+          value=""
+        />
+        <p>
+          Password
+        </p>
+        <input
+          name="password"
+          type="password"
+          value=""
+        />
+        <br />
+        <button
+          data-testid="register-link"
+          disabled=""
+          type="submit"
+        >
+          Login
+        </button>
+        <p
+          id="forgot-pwd"
+        >
+          Forgot password?
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
