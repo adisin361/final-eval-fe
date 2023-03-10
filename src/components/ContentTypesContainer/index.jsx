@@ -93,7 +93,7 @@ const ContentTypesContainer = () => {
 
       <div className='new-fields-column'>
         <div className='new-fields-heading'>
-          <p>Company_Profile</p>
+          <p>{currentTypeChip.name}</p>
           <img src={pencilIcon} />
         </div>
         <p className='fields-text'>{columns.length} fields</p>
