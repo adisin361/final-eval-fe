@@ -15,13 +15,9 @@ const CollectionTypeContainer = () => {
     makeRequest(GET_COLLECTION_DATA, navigate, {
       data: { collection_id: 1 },
     }).then((response) => {
+      console.log(response.data);
       setCollections(response.data);
-      const col = [];
-      for (let key in response.data[0].values.values.values) {
-        col.push(key);
-        if (col.length == 4) break;
-      }
-      setColumns(col);
+      setColumns(Object.keys(response.data[0].values));
     });
   }, []);
   return (
@@ -32,10 +28,6 @@ const CollectionTypeContainer = () => {
       </div>
       <div className='entries-list'>
         <div className='entries-list-heading'>
-          {/* <p className='header-1'>ID</p>
-          <p className='header-2'>Name</p>
-          <p className='header-3'>Website</p>
-          <p className='header-4'>Contact</p> */}
           {columns.map((col, index) => (
             <div className="id-entry" key={index}>
               {col}
@@ -45,9 +37,9 @@ const CollectionTypeContainer = () => {
           <p className='action-items'>Actions</p>
 
         </div>
-        {collections.map((data, index) => {
+        {collections?.map((data, index) => {
           return collections.length !== 0 ? (
-            <EntriesChip cols={columns} key={index} data={data.values.values.values} />
+            <EntriesChip cols={columns} key={index} data={data.values} />
           ) : (
             <></>
           );
